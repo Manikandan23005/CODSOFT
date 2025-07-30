@@ -10,7 +10,9 @@ body {
 }
 
 .calculator {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
   border-radius: 20px;
   padding: 20px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
@@ -58,3 +60,9 @@ button:hover {
 .zero {
   grid-column: span 2;
 }
+@supports not (backdrop-filter: blur(10px)) {
+  .calculator {
+    background-color: rgba(0, 0, 0, 0.6); 
+  }
+}
+
