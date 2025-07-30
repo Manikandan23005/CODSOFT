@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Fira Mono', monospace;
+    background-color: #0e0e0e;
+    color: #fff;
+    padding: 0px 0px;
+  }
+  
+  .skills-section {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 50px;
+  }
+  
+  .skills-section h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #39ff14;
+    margin-bottom: 40px;
+    animation: glow 3s ease-in-out infinite;
+  }
+  
+  .category {
+    margin-bottom: 40px;
+  }
+  
+  .category h2 {
+    font-size: 24px;
+    color: #00ffcc;
+    margin-bottom: 20px;
+    border-left: 4px solid #39ff14;
+    padding-left: 10px;
+  }
+  
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+  .skill span {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 8px;
+  }
+  
+  .percent {
+    color: #39ff14;
+  }
+  
+  .progress-bar {
+    background-color: #333;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 255, 0, 0.4);
+  }
+  
+  .progress {
+    height: 100%;
+    background: linear-gradient(to right, #39ff14, #00cc66);
+    border-radius: 10px;
+    width: 0;
+    animation: growBar 2s ease forwards;
+    animation-delay: 0.2s;
+  }
+  .nav {
+    display: flex;
+    justify-content: right;
+    background: #000000;
+    padding: 10px;
+    flex-wrap: wrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  
+  }
+  
+  .nav img.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    animation: glow-img 3s ease-in-out infinite;
+  }
+  
+  .nav h4 {
+    color: #fff;
+    margin-right: auto;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .nav h4:hover {
+    color: #39ff14;
+    text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .nav-links a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    padding: 10px;
+  }
+  .nav-links a.active {
+    color: #39ff14;
+    text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .nav-links a:hover {
+    color: #39ff14;
+    text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  @keyframes growBar {
+    from {
+      width: 0%;
+    }
+    to {
+      width: var(--width);
+    }
+  }
+  @media (max-width: 600px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      font-size: 26px;
+      color: white;
+      margin-left: auto;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+  
+    .menu-toggle:hover {
+      color: #39ff14;
+      text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .nav-links a {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: left;
+    }
+    .nav-links a.active {
+      color: #39ff14;
+      text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .skills-section {
+        max-width: 800px;
+        margin: auto;
+        padding: 40px;
+      }
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #888;
+  }
+  .footer {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Fira Mono', monospace;
+    box-shadow: 0 -2px 10px rgba(0, 255, 128, 0.2);
+  }
+  
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer .slogan {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 15px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+  }
+  .social-links a {
+    color: #39ff14;
+    font-size: 24px;
+    margin: 0 12px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #fff;
+    transform: scale(1.2);
+  }
+  
+  .icon {
+    width: 40px;
+  }
+  
+  .ilink {
+    text-decoration: none;
+  }
+  button {
+    width: 150px;
+    margin: 10px 20px 0 0;
+    height: 50px;
+    border-radius: 50px;
+    color: #ccc;
+    background: #17191f;
+    border-color: #222733;
+    box-shadow: #313131;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Fira Mono', 'Source Code Pro', 'VT323', monospace;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background-color: #3a3939;
+    color: #39ff14;
+    text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+    }
+    50% {
+      text-shadow: 0 0 20px #39ff14, 0 0 30px #39ff14;
+    }
+    100% {
+      text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+    }
+  }  
+  @keyframes glow-img {
+    0% {
+      box-shadow: 0 0 4px #39ff14;
+    }
+    50% {
+      box-shadow: 0 0 12px #39ff14, 0 0 12px #39ff14;
+    }
+    100% {
+      box-shadow: 0 0 4px #39ff14;
+    }
+  }
