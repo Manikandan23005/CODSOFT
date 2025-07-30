@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects</title>
+  <link rel="icon" href="images/icons8-projects-50.png">
+  <link rel="stylesheet" href="assets/css/projects.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="nav">
+    <img src="images/gojoic1.jpg" alt="Logo" class="logo">
+    <h4>I'm Satoru007</h4>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <section class="projects-section">
+    <h1>Projects</h1>
+    <div class="project-container">
+
+      <div class="project-card">
+        <span class="tech-stack">Vuln Scanner</span>
+        <img src="images/Vuln_scanner.png" alt="Hedone Project Preview">
+        <div class="project-info">
+          <h2>Vulnerability Scanner</h2>
+          <p>It is an Agent-less Vulnerability Scanner with detailed report. This tool can Identifiy Vulnerability on
+            Windows and also in Linux and display the Vulnerabilities based of CVE's</p>
+          <a href="https://github.com/Manikandan23005/Agentless-Vulnerability-scanner" class="project-link"
+            target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="tech-stack">IDS</span>
+        <img src="images/ids.png" alt="SMS Project Preview">
+        <div class="project-info">
+          <h2>Intrusion Detection System</h2>
+          <p>This is a Continuos Monitoring System. It can monitor Ubnormal Activities in the system Detect it and sent
+            a automated Alert to User via mail</p>
+          <a href="https://github.com/Manikandan23005/Intrusion-Detection-System" class="project-link"
+            target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="resume.html"><button>Resume</button></a>
+        <a href="blog.html"><button>Blog</button></a>
+        <a href="contact.html"><button>Contact</button></a>
+      </div>
+    </div>
+  </section>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="slogan">Crafting code with purpose. Securing the web with passion.</p>
+      <p class="slogan">Connect me with</p>
+      <div class="social-links">
+        <a href="https://github.com/Manikandan23005" target="_blank" aria-label="GitHub" class="ilink">
+          <img src="images/icons8-github-94.png" alt="Github" class="icon">
+        </a>
+        <a href="https://www.linkedin.com/in/manikandan-s-40858b292/" target="_blank" aria-label="LinkedIn"
+          class="ilink">
+          <img src="images/icons8-linkedin-50.png" alt="LinkedIn" class="icon">
+        </a>
+        <a href="mailto:manikandan20684455@gmail.com" target="_blank" aria-label="Gmail" class="ilink">
+          <img src="images/icons8-gmail-logo-64.png" alt="gmail" class="icon">
+        </a>
+        <footer>© 2025 Satoru007. All rights reserved.</footer>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
