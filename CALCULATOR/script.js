@@ -1,21 +1,26 @@
-const display = document.getElementById('display');
+let display = document.getElementById("display");
 
 function append(value) {
-  display.value += value;
+  if (display.innerText === "0") {
+    display.innerText = value;
+  } else {
+    display.innerText += value;
+  }
 }
 
 function clearDisplay() {
-  display.value = '';
+  display.innerText = "0";
 }
 
 function deleteLast() {
-  display.value = display.value.slice(0, -1);
+  let text = display.innerText;
+  display.innerText = text.length > 1 ? text.slice(0, -1) : "0";
 }
 
 function calculate() {
   try {
-    display.value = eval(display.value.replace('%', '/100'));
+    display.innerText = eval(display.innerText.replace('÷', '/').replace('×', '*'));
   } catch {
-    display.value = 'Error';
+    display.innerText = "Error";
   }
 }
