@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Satoru's Portfolio</title>
+  <link rel="icon" href="icons8-cyber-security-24.png">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('Ironman.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      background-attachment: fixed;
+      image-rendering: auto;
+    }
+  </style>
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const typedText = document.getElementById('typedText');
+    const texts = ["I'm Manikandan", "I'm Satoru007"];
+    let index = 0;
+    let charIndex = 0;
+    let typing = true;
+
+    function typeEffect() {
+      const currentText = texts[index];
+
+      if (typing) {
+        if (charIndex < currentText.length) {
+          typedText.textContent += currentText.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeEffect, 100);
+        } else {
+          typing = false;
+          setTimeout(typeEffect, 1500);
+        }
+      } else {
+        if (charIndex > 0) {
+          typedText.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+          setTimeout(typeEffect, 50);
+        } else {
+          typing = true;
+          index = (index + 1) % texts.length;
+          setTimeout(typeEffect, 500);
+        }
+      }
+    }
+
+    typeEffect();
+  });
+</script>
+
+<body>
+  <div class="nav">
+    <img src="gojoic1.jpg" alt="Logo" class="logo">
+    <h4>I'm Satoru007</h4>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+  <div class="content">
+    <h1 class="type-wrap">
+      Hi, <span class="typed-text" id="typedText"></span>
+    </h1>
+    <p class="hi"><strong>A Cyber security enthusiast,CTF player & Aspiring Ethical Hacker and Web Developer.</strong> I
+      love solving real-world security problems and building secure Websites using code, logic, and curiosity.
+      Exploring web application flaws and simulating real-world attacks is what drives my passion for <strong>red
+        teaming,security research & web security.</strong></p>
+
+    <section class="highlights">
+      <h2>Highlights:</h2>
+      <ul>
+        <li>Intermediate <strong>Python</strong> programmer with hands-on scripting experience</li>
+        <li>Familiar with <strong>C, Java</strong>, and Bash for cross-platform development</li>
+        <li>Currently learning <strong>web exploitation and red teaming fundamentals</strong></li>
+        <li>Building strong foundations in <strong>web security and ethical hacking</strong></li>
+        <li>Actively improving Capture The Flag (CTF) skills through challenges</li>
+        <li>Comfortable with Linux environments and <strong>command-line tools</strong></li>
+        <li>Exploring bug bounty platforms and <strong>vulnerability analysis</strong></li>
+      </ul>
+    </section>
+    <section class="highlights">
+      <h2>Aspirations:</h2>
+      <ul>
+        <li>Become a proficient <strong>ethical hacker & red teamer</strong> with expertise in web security</li>
+        <li>Contribute to open-source security projects and communities</li>
+        <li>Participate in bug bounty programs to enhance practical skills</li>
+        <li>Continuously learn and adapt to the evolving <strong>cybersecurity landscape</strong></li>
+        <li>Aim to <strong>secure web applications</strong> against real-world threats</li>
+        <li>Develop tools and scripts to automate security testing</li>
+    </section>
+    <div class="buttons">
+      <a href="about.html"><button>About</button></a>
+      <a href="skills.html"><button>Skills</button></a>
+      <a href="contact.html"><button>Contact</button></a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="slogan">Crafting code with purpose. Securing the web with passion.</p>
+      <p class="slogan">Connect me with</p>
+      <div class="social-links">
+        <a href="https://github.com/Manikandan23005" target="_blank" aria-label="GitHub" class="ilink">
+          <img src="icons8-github-94.png" alt="Github" class="icon">
+        </a>
+        <a href="https://www.linkedin.com/in/manikandan-s-40858b292/" target="_blank" aria-label="LinkedIn"
+          class="ilink">
+          <img src="icons8-linkedin-50.png" alt="LinkedIn" class="icon">
+        </a>
+        <a href="mailto:manikandan20684455@gmail.com" target="_blank" aria-label="Gmail" class="ilink">
+          <img src="icons8-gmail-logo-64.png" alt="gmail" class="icon">
+        </a>
+        <footer>© 2025 Satoru007. All rights reserved.</footer>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+</body>
+
+</html>
